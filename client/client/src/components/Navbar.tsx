@@ -15,12 +15,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden items-center gap-8 md:flex">
-            <a
-              href="#details"
-              className="text-sm text-zinc-300 transition hover:text-[#D4AF37]"
-            >
-              Details
-            </a>
+            
 
             <a
               href="#outcomes"
