@@ -35,7 +35,7 @@ export default function RegistrationForm() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/enquiry",
+        "http://localhost:3000/api/enquiry",
         {
           method: "POST",
           headers: {
