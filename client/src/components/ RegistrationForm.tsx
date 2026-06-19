@@ -182,6 +182,7 @@ export default function RegistrationForm() {
                   "Enroll Now"
                 )}
               </button>
+              <p>It make take some time to submitting because the server is setup on render and render take some secounds to wakeup server</p>
             </form>
           )}
         </div>
