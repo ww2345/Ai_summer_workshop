@@ -1,25 +1,65 @@
 # AI Robotics Workshop Project
 
-This project contains a frontend landing page for an AI & Robotics workshop and a backend API that stores registration enquiries.
+This project is a full-stack internship assignment for an AI & Robotics workshop website. It includes a modern frontend landing page, a backend API for registration enquiries, and a MongoDB database to store submitted form data.
 
-## Project Structure
+## 🎯 Project Goal
 
-- `client/` - React + Vite frontend
-- `server/` - Express + TypeScript backend
+Build and deploy a complete web application where users can:
+- view workshop details,
+- learn about the event,
+- submit a registration form, and
+- have their enquiry saved in the database.
 
-## Features
+---
+
+## 🚀 Live Deployment
+
+- **Frontend (Vercel):** `https://your-vercel-app-url.vercel.app`
+- **Backend API (Render):** `https://ai-summer-workshop.onrender.com`
+- **Database:** MongoDB Atlas
+
+> The frontend is deployed on Vercel, the backend is deployed on Render, and the form data is stored in MongoDB.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React + Vite
+- TypeScript
+- Tailwind CSS
+- Hosted on Vercel
+
+### Backend
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB with Mongoose
+- Hosted on Render
+
+---
+
+## 📁 Project Structure
+
+- `client/` - frontend React application
+- `server/` - backend Express API
+- `README.md` - project documentation
+
+---
+
+## ✨ Features
 
 - Workshop landing page
+- Event details section
+- Learning outcomes section
+- FAQ section
 - Registration form
-- Backend API for enquiry submissions
-- MongoDB storage for registrations
+- Enquiry submission to backend
+- Data storage in MongoDB
 
-## Prerequisites
+---
 
-- Node.js installed
-- MongoDB running locally (or update `MONGODB_URI`)
-
-## Setup
+## ⚙️ Local Setup
 
 ### 1. Clone the repository
 
@@ -44,14 +84,24 @@ npm install
 
 ### 4. Configure environment variables
 
-Create a `.env` file inside `server/`:
+#### Backend (`server/.env`)
 
 ```env
 PORT=3000
-MONGODB_URI=mongodb://localhost:27017/ai_robotic_workshop
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<db-name>
 ```
-or You can use the mongodb Atlas url also for deployement purpose i currently deploy it so i fill my mongodb Atlas variables 
-## Run the project
+
+#### Frontend (`client/.env`)
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+> For production, update `https://ai-summer-workshop-opal.vercel.app/` to your deployed backend URL.
+
+---
+
+## ▶️ Run the Project Locally
 
 ### Start the backend
 
@@ -67,11 +117,28 @@ cd client
 npm run dev
 ```
 
-The frontend will run on Vite's default port (usually `5173`), and the backend will run on `3000`.
+The frontend will run on `http://localhost:5173` (default Vite port), and the backend will run on `http://localhost:3000`.
 
-## API
+---
 
-### Submit registration
+## 🌐 API Endpoints
+
+### Health Check
+
+```http
+GET /
+```
+
+Response:
+
+```json
+{
+  "success": true,
+  "message": "Server is running"
+}
+```
+
+### Submit Registration Enquiry
 
 ```http
 POST /api/enquiry
@@ -82,13 +149,48 @@ Body:
 
 ```json
 {
-  "name": "ishant",
-  "email": "ishantdahiya2007@gmail.com",
-  "phone": "8930351966"
+  "name": "Ishant",
+  "email": "ishant@example.com",
+  "phone": "9876543210"
 }
 ```
 
-## Notes
+Response:
 
-- The frontend form posts to `http://localhost:3000/api/enquiry`
-- The server uses CORS so the frontend can communicate with the backend during development
+```json
+{
+  "success": true,
+  "message": "Registration successful",
+  "data": {
+    "name": "Ishant",
+    "email": "ishant@example.com",
+    "phone": "9876543210"
+  }
+}
+```
+
+---
+
+## 🗄️ Database Details
+
+- Database used: **MongoDB**
+- ORM/driver: **Mongoose**
+- Purpose: store workshop registration enquiries
+
+---
+
+## 📦 Deployment Summary
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+- **API URL:** `https://ai-summer-workshop.onrender.com`
+
+
+
+## ✅ Final Notes
+
+- The frontend sends registration data to the backend API.
+- The backend validates the data and stores it in MongoDB.
+- The deployed backend is active on Render and can be used by the frontend.
+- The frontend is live on vercel 
