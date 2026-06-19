@@ -64,7 +64,7 @@ Build and deploy a complete web application where users can:
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ww2345/Ai_summer_workshop
 cd ai-robotic-workshop
 ```
 
