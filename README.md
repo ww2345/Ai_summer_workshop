@@ -14,7 +14,7 @@ Build and deploy a complete web application where users can:
 
 ## 🚀 Live Deployment
 
-- **Frontend (Vercel):** `https://your-vercel-app-url.vercel.app`
+- **Frontend (Vercel):** `https://ai-summer-workshop-opal.vercel.app/`
 - **Backend API (Render):** `https://ai-summer-workshop.onrender.com`
 - **Database:** MongoDB Atlas
 
