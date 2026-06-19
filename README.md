@@ -193,4 +193,8 @@ Response:
 - The frontend sends registration data to the backend API.
 - The backend validates the data and stores it in MongoDB.
 - The deployed backend is active on Render and can be used by the frontend.
-- The frontend is live on vercel 
+- The frontend is live on Vercel.
+
+## 📝 Short Reflection
+
+My approach was to design the project as a simple end-to-end solution where the React frontend handles the user interface, the Express backend manages request validation and business logic, and MongoDB stores all registration data. I also tried to keep the code organized so the flow from form submission to database entry is easy to follow and debug. During the deployment process, I focused on making sure the frontend and backend could work together smoothly in real environments. If I had more time, I would add a proper admin dashboard, improve form validation and error handling, and include email alerts or a confirmation system so users and organisers get faster feedback.
