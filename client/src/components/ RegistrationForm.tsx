@@ -182,7 +182,7 @@ export default function RegistrationForm() {
                   "Enroll Now"
                 )}
               </button>
-              <p>It make take some time in submission because the server is setup on render and i use free plan so render take some secounds to wakeup server</p>
+              <p>It make take some time in submission because the server is setup on render and frontend is setup on vercel and i use free plan so render take some secounds to wakeup server</p>
             </form>
           )}
         </div>
