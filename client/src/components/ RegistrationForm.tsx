@@ -16,6 +16,10 @@ export default function RegistrationForm() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const apiBaseUrl = import.meta.env.VITE_API_URL.replace(
+    /\/+$/,
+    ""
+  );
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>
@@ -35,7 +39,7 @@ export default function RegistrationForm() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/enquiry",
+        `${apiBaseUrl}/api/enquiry`,
         {
           method: "POST",
           headers: {
@@ -60,7 +64,11 @@ export default function RegistrationForm() {
       }
     } catch (error) {
       console.error(error);
-      alert("Server error");
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Unable to connect to server"
+      );
     } finally {
       setLoading(false);
     }
